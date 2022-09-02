@@ -131,9 +131,9 @@ if __name__ == "__main__":
     comp_proc_log = defaultdict(list)
     comp_Queue_log = list()
     type = 'kospi'
-
-    #orderQueue_ans, time_key_ans, proc_log = logManager.run_ans(r'(lf_xs_fm00)')
-    orderQueue_ans, time_key_ans, proc_log = logManager.run_ans(r'(ls_xs_fm00)')
+    future = r'(lf_xs_fm00)'
+    equity = r'(ls_xs_fm00)'
+    orderQueue_ans, time_key_ans, proc_log = logManager.run_ans(future)
 
     for order in orderQueue_ans:
         if order['time'] not in comp_proc_log.keys():
